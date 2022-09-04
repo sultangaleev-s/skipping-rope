@@ -1,0 +1,34 @@
+.exercises {
+    display: none;
+    margin: 150px 0 60px;
+    position: relative;
+    z-index: 10;
+
+    &__header {
+        margin-bottom: 20px;
+        font-size: 26px;
+        color: white;
+    }
+
+    &__exercise {
+        display: flex;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+    }
+    
+    &__exercise:not(:last-child) {
+        border-bottom: 1px solid #344742;
+    }
+
+    &__image {
+        flex: 0 0 90px;
+        margin-right: 10px;
+        max-width: 90px;
+        max-height: 150px;
+    }
+
+    &__description {
+        font-size: 14px;
+        color: #344742;
+    }
+}

@@ -1,0 +1,24 @@
+@import "reset";
+@import "fonts";
+@import "header";
+@import "footer";
+@import "program";
+@import "calendar";
+@import "education";
+@import "exercises";
+@import "settings";
+@import "modal";
+
+body {
+    font-family: 'Andika';
+}
+
+.wrapper {
+    max-width: 390px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.active-page {
+    display: block;
+}

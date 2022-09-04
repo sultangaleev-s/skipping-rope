@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    @@include('html/head.html', {
+        "title":"Main"
+    })
+    <body>
+        @@include('html/header.html', {})
+        <main >
+           <div id="app">
+                <section class="programs active-page" id="home">
+                    <div class="wrapper programs__wrapper">
+                        <h2 class="programs__header">Тренировки</h2>
+                        <div class="programs__container" id='workout'>
+                            <div class="programs__program workout-item" data-workout="weightLoss">
+                                <img src="@img/weightLoss.jpg" alt="weight-loss" class="programs__img">
+                                <span class="programs__name">Снижение веса</span>
+                            </div>
+                            <div class="programs__program workout-item" data-workout="morningExercise">
+                                <img src="@img/morningExercise.jpg" alt="exersion" class="programs__img">
+                                <span class="programs__name">Зарядка</span>
+                            </div>
+                            <div class="programs__program workout-item" data-workout="hardExercise">
+                                <img src="@img/hardExercise.jpg" alt="hard" class="programs__img">
+                                <span class="programs__name">Тяжелая тренировка</span>
+                            </div>
+                        </div>
+                        <h2 class="programs__header">Программы</h2>
+                        <div class="programs__container" id="programs">
+                            <div class="programs__program programs-item">
+                                <img src="@img/lose-width-2.jpg" alt="weight-loss" class="programs__img">
+                                <span class="programs__name">Снижение веса</span>
+                            </div>
+                            <div class="programs__program programs-item">
+                                <img src="@img/from-healty.jpg" alt="exersion" class="programs__img">
+                                <span class="programs__name">Для здоровья</span>
+                            </div>
+                            <div class="programs__program programs-item">
+                                <img src="@img/Strong-muscules.jpg" alt="hard" class="programs__img">
+                                <span class="programs__name">Крепкие мышцы</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="education" id="education">
+                    <div class="wrapper">
+                        <h2 class="education__header">Все о прыжках на&nbsp;скакалке</h2>
+                        <h3 class="education__title">Польза прыжков на скакалке</h3>
+                        <ul class="education__list">
+                            <li class="education__list-item">Вы становитесь гораздо выносливее</li>
+                            <li class="education__list-item">Тратите большое количество калорий</li>
+                            <li class="education__list-item">Сбрасываете лишний вес</li>
+                            <li class="education__list-item">Улучшаете рельеф мышц</li>
+                            <li class="education__list-item">Развиваете ловкость и координацию</li>
+                        </ul>
+                        <img src="@img/plus-minus.jpg" alt="plus and minus" class="education__picture">
+                        <h3 class="education__title">Какие мышцы работают?</h3>
+                        <p class="education__text">Работа при прыжках со скакалкой осуществляется за счет этих мышц:</p>
+                        <ul class="education__list">
+                            <li class="education__list-item">Икроножных мышц</li>
+                            <li class="education__list-item">Квадрицепса</li>
+                            <li class="education__list-item">Бицепса бедра</li>
+                        </ul>
+                        <img src="@img/muscules-work.jpg" alt="muscules work" class="education__picture">
+                        <h3 class="education__title">Прыжки со скакалкой для похудения</h3>
+                        <p class="education__text">
+                            Используя прыжки на скакалке в качестве средства для похудения, за каждые 100 прыжков вы будете сжигать от 45 до 80 калорий. Такой разброс показателей зависит, в первую очередь, от собственного веса спортсмена. Чем выше вес, тем больше энергии требуется для одного прыжка. Получается, за один час занятий со скакалкой можно потратить от 700 до 1200 калорий
+                        </p>
+                        <img src="@img/calories-table.jpeg" alt="calories-table" class="education__picture">
+                        <h3 class="education__title">Особенности выполнения упражнения</h3>
+                        <p class="education__text">
+                            Само собой, для достижения оптимального результата первостепенна техника прыжков на скакалке. Особенных технических тонкостей тут на первый взгляд нет:
+                        </p>
+                        <ul class="education__list">
+                            <li class="education__list-item">Приземляемся на носочки</li>
+                            <li class="education__list-item">Спину держим прямой, а локти прижимаем близко к корпусу</li>
+                            <li class="education__list-item">Крутим кистями синхронно со скакалкой</li>
+                            <li class="education__list-item">Работаем в одной скорости</li>
+                            <li class="education__list-item">Стараемся поддерживать одинаковый темп дыхания</li>
+                        </ul>
+                        <img src="@img/rules.webp" alt="calories-table" class="education__picture">
+                        <h3 class="education__title">Как подобрать скакалку?</h3>
+                        <p class="education__text">
+                            Главный критерий при выборе спортивного инвентаря для тренировок ‒ длина. Она зависит непосредственно от вашего роста. 
+                        </p>
+                        <img src="@img/length.jpg" alt="calories-table" class="education__picture">
+                        <p class="education__text">
+                            Чтобы не ошибиться с выбором, натяните скакалку, встав ровно на середину шнура двумя ногами. Рукоятки должны быть на уровне подмышек. Хорошо, если на ней можно поменять длину в зависимости от роста. Такой вариант идеально подходит для детей.
+                        </p>
+                        <img src="@img/length2.jpg" alt="calories-table" class="education__picture">
+                        <h3 class="education__title">Доступность</h3>
+                        <p class="education__text">
+                            Скакалка – один из самых простых и недорогих спортивных тренажеров. К тому же занимает мало места, и ее всегда можно взять с собой в командировку или отпуск. Для прыжков не нужен спортзал или беговая дорожка, достаточно найти лишь немного свободного пространства.
+                        </p>
+                        <img src="@img/availability.jpg" alt="availability" class="education__picture">
+                    </div>
+                </section>
+                <section class="settings" id = 'settings'>
+                    <div class="wrapper">
+                        <h2 class="settings__header">
+                            Настройки
+                        </h2>
+                        <div class="settings__setting">
+                            <span class="settings__info">Звук</span>
+                            <btn class="settings__switch settings__switchOn" id = 'volume'></btn>
+                        </div>
+                        <div class="settings__setting">
+                            <span class="settings__info">Синий цвет</span>
+                            <btn class="settings__switch" id="color"></btn>
+                        </div>
+                        <div class="settings__setting">
+                            <span class="settings__info">Очистить прогресс</span>
+                            <button class="settings__remove" id="removeBtn"></button>
+                        </div>
+                    </div>
+                </section>
+           </div>
+        </main>
+        @@include('html/footer.html', {})
+        <script src="js/app.min.js"></script>
+    </body>
+</html>

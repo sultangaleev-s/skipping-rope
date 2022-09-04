@@ -1,0 +1,114 @@
+.settings {
+    display: none;
+    margin: 161px 0 60px;
+    position: relative;
+    z-index: 10;
+
+    &__header {
+        font-size: 26px;
+        color: white;
+        margin-bottom: 20px;
+    }
+
+    &__switch {
+        width: 62px;
+        height: 32px;
+        background: #E5E5E5;
+        appearance: none;
+        border: none;
+        cursor: pointer;
+        position: relative;
+        border-radius:16px;
+    }
+    &__switch:not(:last-child) {
+        margin-bottom: 15px;
+    }
+    
+    
+    &__switch:before {
+        content: ' ';
+        position: absolute;
+        left: 1px;
+        top: 1px;
+        width: 60px;
+        height: 30px;
+        background: #FFFFFF;
+        z-index: 1;
+        border-radius:16px;
+    }
+    
+    &__switch:after {
+        content: ' ';
+        height: 29px;
+        width: 29px;
+        border-radius: 28px;
+        z-index: 2;
+        background: #FFFFFF;
+        position: absolute;
+        transition-duration: 300ms;
+        top: 1px;
+        left: 1px;
+        box-shadow: 0 2px 5px #999999;
+    }
+
+    &__switchOn , 
+    &__switchOn:before {
+        background: #4cd964 !important;
+    }
+
+    &__switchOn:after {
+        left: 32px !important;
+    }
+
+    &__setting {
+        display: flex;
+        justify-content: space-between;
+        padding: 5px 0;
+        border-bottom: 1px solid #344742;
+    }
+
+    &__setting:not(:last-child) {
+        margin-bottom: 20px;
+    }
+
+    &__info {
+        font-size: 20px;
+    }
+
+    &__remove {
+        position: relative;
+        width: 20px;
+        background-color: transparent;
+        border: none;
+    }
+
+    &__remove::before,
+    &__remove::after {
+        content: ' ';
+        position: absolute;
+        width: 2px;
+        height: 30px;
+        background-color: red;
+        top: 0px;
+        left: 0px;
+        transform: rotate(45deg);
+        transition-duration: 300ms;
+    }
+
+    &__remove::after {
+        transform: rotate(-45deg);
+    }
+
+    &__remove_active::before,
+    &__remove_active::after {
+        background-color: #4cd964;
+    }
+
+    &__remove_active::after {
+        height: 15px;
+        top: 13px;
+        left: -15px;
+    }
+}
+
+

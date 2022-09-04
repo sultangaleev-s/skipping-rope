@@ -1,0 +1,63 @@
+.footer {
+    padding: 15px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-top: 1px solid #344742;
+    background-color: #f2f2f2;
+    z-index: 15;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__btn {
+        height: 30px;
+        width: 30px;
+        border: none;
+        background-color: transparent;
+    }
+
+    &__btn svg {
+        height: 30px;
+        width: 30px;
+        fill: #344742;
+    }
+
+    &__btn-more {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__circle {
+        display: block;
+        width: 8px;
+        height: 8px;
+        border: 2px solid #344742;
+        border-radius: 50%;
+    }
+
+    &__circle:not(:last-child) {
+        margin-right: 2px;
+    }
+
+    &__btn_active svg{
+        fill: rgb(85,199,115);
+    }
+
+    &__btn_active span {
+        border-color: rgb(85,199,115);
+    }
+
+    &__btn_active-blue svg{
+        fill: #4ee1ff;
+    }
+
+    &__btn_active-blue span {
+        border-color: #4ee1ff;
+    }
+
+}

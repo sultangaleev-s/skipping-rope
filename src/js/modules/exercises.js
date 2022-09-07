@@ -1,25 +1,4 @@
 const exercises = () => {
-    const app = document.getElementById('app')
-
-    const createSection = () => {
-        const section = document.createElement('section')
-        section.classList.add('exercises')
-        section.id = 'exercises'
-
-        const wrapper = document.createElement('div')
-        wrapper.classList.add('wrapper')
-
-        const header = document.createElement('h2')
-        header.classList.add('exercises__header')
-        header.textContent = 'Упражнения'
-
-        wrapper.append(header)
-        section.append(wrapper)
-        app.append(section)
-
-        return wrapper
-    }
-
 
     const nameVariable = ['standart', 'reverse', 'boxer', 'footToFoot', 'overlap', 'offhand', 'offhandLeftRight', 'rotate90', 'rotate180', 'legKick', 'legKickRev', 
         'handsCross', 'handsCrossDiff', 'legsCross', 'oneLeg', 'doubleStandart', 'rack', 'heelToe', 'bounceLegCross', 'squat']
@@ -99,11 +78,8 @@ const exercises = () => {
             }
         }
 
-    const wrapper = createSection()
-
     for(let i = 0; i < nameVariable.length; i++) {
         allExercises[nameVariable[i]] = new Exercises(exercisesName[i], exercisesDescription[i], `./img/exercises/${nameVariable[i]}.jpg`)
-        allExercises[nameVariable[i]].createFull(wrapper)
     }
     
     return allExercises

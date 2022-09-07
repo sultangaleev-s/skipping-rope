@@ -1,4 +1,4 @@
-import { colorBlue } from './selectColor.js'
+
 
 const navigation = () => {
     const menuBtns = document.querySelectorAll('.footer__btn')
@@ -12,11 +12,11 @@ const navigation = () => {
     function selectPage() {
         menuBtns.forEach(btn => {
             if(btn.dataset.name === this.dataset.name) {
-                colorBlue 
+                localStorage.colorBlue 
                 ? btn.classList.add('footer__btn_active-blue')
                 : btn.classList.add('footer__btn_active')
             } else {
-                colorBlue 
+                localStorage.colorBlue 
                 ? btn.classList.remove('footer__btn_active-blue')
                 : btn.classList.remove('footer__btn_active')
             }

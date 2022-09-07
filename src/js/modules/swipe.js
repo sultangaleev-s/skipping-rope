@@ -30,10 +30,10 @@ const swipe = (trackSelector, contentSelector) => {
             content.forEach(item => {
                 item.style.transform = `translateX(0px)`
         }) 
-    }else if (posX2 + position < -imgWidth * 2 + 30) {
+    }else if (posX2 + position < -imgWidth * 2) {
         position = -imgWidth * 2
             content.forEach(item => {
-                item.style.transform = `translateX(${-imgWidth*2 + 30}px)`
+                item.style.transform = `translateX(${-imgWidth*2}px)`
         }) 
     }
     }

@@ -1,5 +1,13 @@
+import { workoutsGroup, programsGroup } from '../workoutsAndPrograms.js'
+
 const createModal = (workoutName) => {
-    const workout = workoutsGroup[workoutName]
+    if(workoutsGroup[workoutName]) {
+        const workout = programsGroup[workoutName]
+    } 
+    const workout = 
+    workoutsGroup[workoutName] 
+    ? workoutsGroup[workoutName]
+    : programsGroup[workoutName]
     const app = document.getElementById('app')
 
     const modal = document.createElement('div')
@@ -19,29 +27,29 @@ const createModal = (workoutName) => {
 
     const name = document.createElement('div')
     name.textContent = workout[0]
-    colorBlue 
+    localStorage.colorBlue 
     ? name.classList.add('modal__workout-name_blue') 
     : name.classList.add('modal__workout-name')
 
     wrapper.append(image,name)
-    createDifficultBlock(workout, wrapper)
-    createInfoBlock(workout, wrapper)
-    createExercises(workout, wrapper)
     
     const startBtn = document.createElement('button')
     startBtn.textContent = 'Старт'
-    colorBlue
+    localStorage.colorBlue
     ? startBtn.classList.add('modal__start', 'modal__start_blue')
     : startBtn.classList.add('modal__start')
-    startBtn.addEventListener('click', () => {workoutStart(workout, modal, wrapper, startBtn)})
 
     modal.append(closeBtn,startBtn)
 
     modal.append(wrapper)
     app.append(modal)
     return {
+        workout,
         modal,
+        wrapper,
         closeBtn,
         startBtn,
     }
 }
+
+export default createModal

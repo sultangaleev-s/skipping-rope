@@ -1,18 +1,18 @@
+//создание страницы с календарем
 const calendar = () => {
     const weekDays = ['пн','вт','ср','чт','пт','сб','вс']
     const months = ['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь']
     const d = new Date()
-    //const container = document.getElementById('app')
 
     let year = d.getFullYear(),
     dateNow = d.getDate(),
     month = d.getMonth(),
-    day = d.getDay(),
     firstDayMonth = new Date(year,month,1).getDay(),
     allDayMonth = new Date(year,month+1,0).getDate(),
     allDayLastMonth = new Date(year,month,0).getDate(),
     workoutDay = 2
 
+    //контейнер для календаря
     const createCalendar = () => {
         let section = document.createElement('section')
         section.classList.add('calendar')
@@ -38,6 +38,7 @@ const calendar = () => {
         
     }
 
+    //Наполнение контейнера
     const fillingCalendar = (container) => {
         let monthNow = document.createElement('h3')
         monthNow.textContent = months[month]
@@ -56,6 +57,7 @@ const calendar = () => {
         })
 
         if (firstDayMonth > 1) {
+            //дни недели
             for(let c = firstDayMonth -1; c > 0 ; c--){
                 const date = document.createElement('span')
                 date.textContent = allDayLastMonth - c + 1
@@ -63,7 +65,7 @@ const calendar = () => {
                 calendar.append(date)
             }
         }
-
+        //даты
         for (let i = 1; i < allDayMonth +1; i++) {
             const date = document.createElement('span')
             date.textContent = i
@@ -81,7 +83,7 @@ const calendar = () => {
             workoutDay++
         }
     }
-
+    //блок с подсказками
     const createPrompt = (container) => {
         const promptBlock = document.createElement('div')
         promptBlock.classList.add('calendar__prompt')
@@ -96,7 +98,7 @@ const calendar = () => {
         container.append(promptBlock)
     }
 
-
+    //добавление готового календаря на страницу
     const container = createCalendar()
     document.getElementById('app').append(container.section)
     fillingCalendar(container.container)

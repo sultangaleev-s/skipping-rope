@@ -60,4 +60,13 @@
         border-color: #4ee1ff;
     }
 
+    @media (min-width: 768px) {
+        &__wrapper{
+            justify-content: flex-end;
+        }
+        
+        &__btn:not(:first-child) {
+            margin-left: 30px;
+        }
+    }
 }

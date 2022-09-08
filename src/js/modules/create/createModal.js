@@ -14,7 +14,7 @@ const createModal = (workoutName) => {
     modal.classList.add('modal')
     
     const wrapper = document.createElement('div')
-    wrapper.classList.add('wrapper')
+    wrapper.classList.add('wrapper', 'modal__wrapper')
 
     const closeBtn = document.createElement('button')
     closeBtn.classList.add('modal__close')

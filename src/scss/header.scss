@@ -16,21 +16,38 @@
         justify-content: space-between;
         align-items: center;
     }
-
+    
     &__info-block {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-
+    
     &__sum-info {
         font-size: 25px;
         font-weight: bold;
         color: #344742;
     }
-
+    
     &__text {
         font-size: 14px;
         color: #344742;
+    }
+    @media (min-width: 768px) {
+        &__wrapper{
+            justify-content: start;
+        }
+
+        &__info-block:not(:last-child) {
+            margin-right: 40px;
+        }
+
+        &__sum-info {
+            font-size: 30px;
+        }
+
+        &__text {
+            font-size: 16px;
+        }
     }
 }

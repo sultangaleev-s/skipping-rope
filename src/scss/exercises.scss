@@ -31,4 +31,14 @@
         font-size: 14px;
         color: #344742;
     }
+
+    @media (min-width: 768px) {
+        &{
+            margin-top: 160px;
+        }
+
+        &__header {
+            text-align: center;
+        }
+    }
 }

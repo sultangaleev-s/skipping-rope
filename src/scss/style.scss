@@ -22,3 +22,15 @@ body {
 .active-page {
     display: block;
 }
+
+@media (min-width: 768px) {
+    .wrapper{
+        max-width: 768px;
+    }
+}
+@media (min-width: 1024px) {
+    .wrapper{
+        max-width: 1024px;
+    }
+}
+

@@ -109,6 +109,12 @@
         top: 13px;
         left: -15px;
     }
+    @media (min-width: 768px) {
+
+        &__header {
+            text-align: center;
+        }
+    }
 }
 
 

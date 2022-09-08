@@ -54,4 +54,20 @@
         padding: 0 15px;
         margin-right: 15px;
     }
+
+    @media (min-width: 768px) {
+        &{
+            margin-top: 160px;
+        }
+
+        &__header {
+            text-align: center;
+        }
+
+        &__container {
+            display: block;
+            width: 50%;
+            margin: 0 auto;
+        }
+    }
 }

@@ -2,6 +2,8 @@ const swipe = (trackSelector, contentSelector) => {
     const track = document.querySelector(trackSelector)
     const content = document.querySelectorAll(contentSelector)
     const imgWidth = content[0].offsetWidth
+    const rightPos = content[content.length - 1].getBoundingClientRect().right
+    console.log(rightPos)
     let postInit = 0,
     posFinal = 0,
     posX1 = 0,
@@ -15,7 +17,6 @@ const swipe = (trackSelector, contentSelector) => {
     const action = (e) => {
         posX1 = e.touches[0].clientX
         posX2 = posX1 - postInit
-        posX2 *=  1.5
         
         content.forEach(item => {
             item.style.transform = `translateX(${posX2 + position}px)`
@@ -30,10 +31,10 @@ const swipe = (trackSelector, contentSelector) => {
             content.forEach(item => {
                 item.style.transform = `translateX(0px)`
         }) 
-    }else if (posX2 + position < -imgWidth * 2) {
-        position = -imgWidth * 2
+    }else if (posX2 + position < -rightPos + track.offsetWidth + 10 * content.length) {
+        position = -rightPos + track.offsetWidth + 10 * content.length
             content.forEach(item => {
-                item.style.transform = `translateX(${-imgWidth*2}px)`
+                item.style.transform = `translateX(${-rightPos + track.offsetWidth + 10 * content.length}px)`
         }) 
     }
     }

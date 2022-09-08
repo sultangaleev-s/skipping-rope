@@ -188,7 +188,7 @@
     &__pause-timer {
         position: absolute;
         top: -20px;
-        right: 20px;
+        right: 10%;
         transform: translateX(-50%);
         width: 40px;
         height: 40px;
@@ -225,6 +225,23 @@
     &__programm-complete {
         font-size: 12px;
         color: lightgray !important;
+    }
+
+    @media (min-width: 768px) {
+       &__close {
+        left: calc(50% - 270px);
+       }
+
+       &__wrapper {
+        max-width: 600px !important;
+       }
+
+       &__pause-timer {
+        width: 60px;
+        height: 60px;
+        right: 50%;
+        transform: translateX(50%);
+    }
     }
 }
 
